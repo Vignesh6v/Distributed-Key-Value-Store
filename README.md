@@ -5,26 +5,28 @@ Developed an in memory key-value store (Distributed Systems course project) with
 * Detection of Strict Consistency or Eventually consistent
 * Support for Consistency levels
 
+
+Requirements
+=======
+* Apache Thrift
+* Java 1.7 
+
 API Documentation
 =======
-1) Set  - If a key-value pair already exists, overwrite its value. If a key-value pair does not already exist, create it. 
+1) Get  - If a key-value pair exists, return its value and kSuccess. If a key-value pair does not exist, return error kKeyNotFound.
 ```bash 
-Result kvset(1:string key, 2:string value)
+./kvclient -server host:port -get 'my_key' > my_value_file
 ```
 
+2) Set - If a key-value pair already exists, overwrite its value. If a key-value pair does not already exist, create it.
+```bash
+./kvclient -server host:port -set 'my_key' 'my_value'
+```
 
-   // If a key-value pair already exists, overwrite its value.
-   // If a key-value pair does not already exist, create it.
-   ,
-
-   // If a key-value pair exists, return its value and kSuccess.
-   // If a key-value pair does not exist, return error kKeyNotFound.
-   Result kvget(1:string key),
-
-
-   // If a key-value pair exists, delete it and return kSuccess.
-   // If a key-value pair does not exist, return kKeyNotFound.
-   Result kvdelete(1:string key),
+3) Del - If a key-value pair exists, delete it and return kSuccess. If a key-value pair does not exist, return kKeyNotFound.
+```bash
+./kvclient -server host:port -del 'my_key'
+```
 
 
 Project Team
