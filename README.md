@@ -9,6 +9,6 @@ Developed an in memory key-value store (Distributed Systems course project) with
 
 Project Team
 ==============
-Ankur Patel
-GuruPrasad 
-Vignesh Ramesh
+* Ankur Patel
+* GuruPrasad 
+* Vignesh Ramesh
