@@ -40,8 +40,25 @@ API Documentation
   $ ./sequence_server
 ```
 3) To run the KVClient, run the script
+
+* If the server is consistent
+
 ```bash
   $ ./consistency_test -server 192.168.1.5:9634
+  $ echo $?
+  0
+```
+* If the server is Inconsistent
+```bash
+  $ ./consistency_test -server 192.168.1.5:9634
+  $ echo $?
+  1
+```
+* If the test is inconclusive (e.g., the server stopped responding)
+```bash
+  $ ./consistency_test -server 192.168.1.5:9634
+  $ echo $?
+  2
 ```
 
 Project Team
