@@ -1,7 +1,7 @@
 # Distributed-Key-Value-Store
 Distributed System - Course Project
 
-Developed an in memory key-value store (Distributed Systems course project) with features like 
+Developed an in memory key-value store (Distributed Systems course project) with features like
 * Detection of Strict Consistency or Eventually consistent
 * Support for Consistency levels
 
@@ -9,12 +9,14 @@ Developed an in memory key-value store (Distributed Systems course project) with
 Requirements
 =======
 * Apache Thrift
-* Java 1.7 
+* Java 1.7
 
 API Documentation
 =======
+#key-value Store
+
 1) Get  - If a key-value pair exists, return its value and kSuccess. If a key-value pair does not exist, return error kKeyNotFound.
-```bash 
+```bash
 ./kvclient -server host:port -get 'my_key' > my_value_file
 ```
 
@@ -27,10 +29,23 @@ API Documentation
 ```bash
 ./kvclient -server host:port -del 'my_key'
 ```
+#Consistency Check
 
+1) To compile all the java files, run the script Compile_all.
+```bash
+  $ ./compile_all
+```
+2) To run the sequence server, run the script SequenceServer. This will run on the port 5432.
+```bash
+  $ ./sequence_server
+```
+3) To run the KVClient, run the script
+```bash
+  $ ./consistency_test -server 192.168.1.5:9634
+```
 
 Project Team
 ==============
 * Ankur Patel
-* GuruPrasad 
+* GuruPrasad
 * Vignesh Ramesh
