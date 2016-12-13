@@ -1,4 +1,4 @@
-# Distributed-Key-Value-Store
+# Distributed Key-Value Store
 Distributed System - Course Project
 
 Developed an in memory key-value store (Distributed Systems course project) with features like
