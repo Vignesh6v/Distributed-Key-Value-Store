@@ -13,7 +13,7 @@ Requirements
 
 API Documentation
 =======
-#key-value Store
+##key-value Store
 
 1) Get  - If a key-value pair exists, return its value and kSuccess. If a key-value pair does not exist, return error kKeyNotFound.
 ```bash
@@ -29,7 +29,7 @@ API Documentation
 ```bash
 ./kvclient -server host:port -del 'my_key'
 ```
-#Consistency Check
+##Consistency Check
 
 1) To compile all the java files, run the script Compile_all.
 ```bash
